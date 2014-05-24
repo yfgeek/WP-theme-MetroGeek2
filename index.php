@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php setindexview(); ?>  
+<?php setindexview(); ?> 
 <div id="maincon">
 	<div id="content">
 	<div class="blog"> 
@@ -11,11 +11,10 @@
 	<?php endwhile; else: ?>
 		<p>暂无文章</p>
 	<?php endif; ?>
-
-	<p class="updown"><?php posts_nav_link(' ','Prev', 'Next'); ?></p>
 	</div>
-	
+	<p class="updown"><?php posts_nav_link(' ','Prev', 'Next'); ?></p>
 	</div>
 <?php get_sidebar() ?>
 </div>
+
 <?php get_footer(); ?>

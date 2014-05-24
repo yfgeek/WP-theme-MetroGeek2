@@ -21,7 +21,7 @@ $(".txt").html("<b>Twitter</b>:@yfbk");
 });
 //Baidu
 $("#baiduweb").mousemove(function(){
-$(".txt").html("<b>原百度空间</b>:hi.baidu.com/yfboke");
+$(".txt").html("<b>百度空间</b>:hi.baidu.com/yfboke");
 });
 
 
