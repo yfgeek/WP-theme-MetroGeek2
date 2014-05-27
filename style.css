@@ -1,4 +1,4 @@
-body{
+/*Metro Geek 2Theme by IvanCopyleft*/body{
 width:100%;
 background:url(images/header.jpg) #eee top left no-repeat;
 font-family: "Microsoft YaHei","Helvetica";
@@ -203,7 +203,7 @@ background:#009827;
 .blogcom:hover{
 background:#009827;
 }
-.blogtitle{position: relative;zoom: 1;margin-top: 15px;font-size: 40px;line-height: 40px;margin-left: -10px;
+.blogtitle{position: relative;zoom: 1;margin-top: 15px;font-size: 40px;line-height: 40px;margin-left: -10px;width: 80%;
 }
 .blogtitle a:hover{color:#ffffff;
 background:#009827;
@@ -223,11 +223,8 @@ font-size:14px;padding-bottom:0px;
 #maincon .blogcon{padding-top:5px;
 padding-left:5px;
 }
-.blogmeta{
-text-align:left;
-font-size:13px;
-padding-left: 20px;
-}
+.blogmeta{display:none;text-align: left;font-size: 13px;padding-right: 20px;margin-left: 750px;overflow: hidden;margin-bottom: 0px;margin-top: 10px;position: absolute;white-space: nowrap;
+}.blogmeta li{margin-bottom: 5px;}
 
 .more-link{/*
 position: absolute;
@@ -262,25 +259,7 @@ background:#ff9600;
 .blogcate{
 background:url(images/tag.png) no-repeat left;
 padding-left:30px;
-}
-.blogcate a{
-color:#eee;
-background:#3c98ff;
-padding:3px;
-}
-.blogcate a:hover{
-color:#fff;
-background:#3c98ff;
-}
-.blogau a{ 
-color:#eee;
-background:#3c98ff;
-padding:3px;
-}
-.blogau a:hover{
-color:#fff;
-background:#3c98ff;
-}
+}
 .blogau{
 background:url(images/user.png) no-repeat left;
 padding-left:30px;
@@ -315,9 +294,9 @@ font-weight:bold;
 font-size:15px;
 padding-top:20px;
 padding:5px 10px 5px 8px;
-background:#6ba3e2;
+background:#5F5F5F;
 color:#fff;
-height:20px;border-left-style: solid;border-left-width:8px;border-left-color: rgb(121, 145, 219);
+height:20px;border-left-style: solid;border-left-width:8px;border-left-color:rgb(121, 121, 121);
 }
 .sids p{
 padding:5px;
@@ -328,12 +307,7 @@ margin:8px 2px 8px 2px;
 }
 
 .sids li {
-margin:0px 0px 0px 10px;
-list-style-type:none;
-padding-left:10px;
-margin-top:10px;
-margin-bottom:10px;
-/*background:url(images/dot.jpg) no-repeat;*/
+margin: 0px 0px 0px 10px;list-style-type: none;padding-left: 10px;margin-top: 10px;margin-bottom: 10px;width: 200px;/* background: url(images/dot.jpg) no-repeat; */overflow: hidden;text-overflow: ellipsis;white-space: nowrap;width: 180px;
 }
 .sids li  a{
 color:#000;

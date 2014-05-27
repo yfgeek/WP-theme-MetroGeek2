@@ -120,7 +120,7 @@ $authors='匿名';
 }else{
 $authors=stripslashes($comment->comment_author);
 }
-$istorcoutput.='<li><a href="'.get_permalink($comment->comment_post_ID).'#comment-'.$comment->comment_ID.'" title="On '.get_the_title($comment->comment_post_ID).'">'.$authors.' : '.mb_substr(strip_tags($comment->comment_content),0,11,$wpchres).'</a></li>'."\n";if($i==$limit)
+$istorcoutput.='<li><a href="'.get_permalink($comment->comment_post_ID).'#comment-'.$comment->comment_ID.'" title="'.strip_tags($comment->comment_content).'">'.$authors.' : '.mb_substr(strip_tags($comment->comment_content),0,20,$wpchres).'</a></li>'."\n";if($i==$limit)
 {
 break;
 }
