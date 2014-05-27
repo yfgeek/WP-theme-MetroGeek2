@@ -65,7 +65,7 @@ color:#fff;
 
 #tab a{
  font-size:16px; padding:5px 15px ;
- color:#f3f3f3;
+ color:#fff;
   background:#203754;          filter:alpha(opacity=60);        -moz-opacity:0.6;        -khtml-opacity: 0.6;        opacity: 0.6; 
 }
 #tab .vsss,#tab .page_item,#tab .notvs{
