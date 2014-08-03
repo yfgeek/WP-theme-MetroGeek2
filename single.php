@@ -2,12 +2,7 @@
 <?php setPostViews(get_the_ID()); ?>  
 <script>
 $(document).ready(function(){
-
-$(".blogtitle").click(function(){
-$(".blogdate").fadeToggle(600);
-$(".blogcom").fadeToggle(700);
-});
-$(".ablogtitle").mousemove(function(){
+$(".ablogtitle").click(function(){
 $(".blogmeta").fadeIn(500);
 });
 
@@ -22,7 +17,7 @@ $(".blogmeta").fadeIn(500);
 			<li class="blogau"><strong>日期:</strong> <?php the_time('Y-m-d'); ?> </li>
 			<li class="blogau"><strong>作者:</strong> <?php the_author(); ?></li>
 		</ul>
-		<div  class="blogtitle" ><a class="ablogtitle" href="#" title="点击查看访问量,评论量信息"><?php the_title(); ?></a></div>	
+		<div  class="blogtitle" ><a class="ablogtitle" href="#" title="点击查看更多信息"><?php the_title(); ?></a></div>	
 		<div class="blogdate" title="阅读量"><?php echo getPostViews(get_the_ID()); ?>  </div>
 		<div class="blogcom" title="评论数"><?php comments_number('0','1','%') ?></div>		
 		<div class="blogcon">

@@ -1,15 +1,5 @@
 
 <?php get_header(); ?>
-<script>
-$(document).ready(function(){
-//当前分类标记
-   $(".current-cat").html(function(i,origText){
-    return "<strong>" + origText + "√</strong>";
-  });
- 
-});
-
-</script>
 	<div id="maincon">
 	<div id="content">
 	<div class="blog">

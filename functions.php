@@ -116,11 +116,11 @@ $i=1;
 $istorcoutput='';
 foreach($comments as $comment){
 if(stripslashes($comment->comment_author)==''){
-$authors='匿名';
+$authors='路人';
 }else{
 $authors=stripslashes($comment->comment_author);
 }
-$istorcoutput.='<li><a href="'.get_permalink($comment->comment_post_ID).'#comment-'.$comment->comment_ID.'" title="'.strip_tags($comment->comment_content).'">'.$authors.' : '.mb_substr(strip_tags($comment->comment_content),0,20,$wpchres).'</a></li>'."\n";if($i==$limit)
+$istorcoutput.='<li><span class="leftimg">'.get_avatar( $comment, 32,'',$comment->comment_author).'<span class="imgtx">'.$authors.'</span></span><span class="rightcomments"><a href="'.get_permalink($comment->comment_post_ID).'#comment-'.$comment->comment_ID.'" title="'.strip_tags($comment->comment_content).'">'.mb_substr(strip_tags($comment->comment_content),0,40,$wpchres).'</a></span></li>'."\n";if($i==$limit)
 {
 break;
 }
