@@ -30,7 +30,7 @@
 			<div class="sidetitle">信息</div>
 			<ul>
 			<li><?php wp_loginout();?></li>
-			<li>已经被访问<b><?php echo getindexview(); ?></b>次</li>
+			<li>已经被访问<span class="tcounts"><?php echo getindexview(); ?></span>次</li>
 			</ul>
 			</div>
 	</div>
