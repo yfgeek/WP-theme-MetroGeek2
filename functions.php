@@ -1,5 +1,14 @@
-<?php 
+﻿<?php 
  function my_function_admin_bar(){ return false; } add_filter( 'show_admin_bar' ,  'my_function_admin_bar');
+/*
+解决头像问题
+*/
+function duoshuo_avatar($avatar) {
+    $avatar = str_replace(array("www.gravatar.com","0.gravatar.com","1.gravatar.com","2.gravatar.com"),"gravatar.duoshuo.com",$avatar);
+    return $avatar;
+}
+add_filter( 'get_avatar', 'duoshuo_avatar', 10, 3 );
+
 /*
 评论框
 */

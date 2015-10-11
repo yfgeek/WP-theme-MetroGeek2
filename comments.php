@@ -1,5 +1,5 @@
 <div class="commentsss">
-	<?php if(post_password_required()){?><p class="nopassword"><?php _e('请输入阅读密码：');?></p>
+	<?php if(post_password_required()){?><p class="nopassword"><?php _e('这个文章不可见呢：');?></p>
 </div>
 <?php return;}
 if(have_comments()){?>
