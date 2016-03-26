@@ -1,6 +1,6 @@
 WP-theme-MetroGeek2
 ===================
-Version:2.0
+Version:2.1
 Created Date:2014-5-18
 
 A WordPress theme by Ivan
