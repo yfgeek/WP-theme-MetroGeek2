@@ -113,6 +113,29 @@ function setindexview() {
         update_post_meta(1, $count_key, $count);   
     }   
 }
+/*文章点赞*/
+function getPostLike($postID){   
+    $count_key = 'post_like_count';   
+    $count = get_post_meta($postID, $count_key, true);   
+    if($count==''){   
+        delete_post_meta($postID, $count_key);   
+        add_post_meta($postID, $count_key, '0');   
+        return "0";   
+    }   
+    return $count ;   
+}   
+function setPostLike($postID) {   
+    $count_key = 'post_like_count';   
+    $count = get_post_meta($postID, $count_key, true);   
+    if($count==''){   
+        $count = 0;   
+        delete_post_meta($postID, $count_key);   
+        add_post_meta($postID, $count_key, '0');   
+    }else{   
+        $count++;   
+        update_post_meta($postID, $count_key, $count);   
+    }   
+}  
 
 
 /*

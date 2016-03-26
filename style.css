@@ -1260,3 +1260,7 @@ ul[data-liffect="flipInY"].play li {
     90% { -webkit-transform: perspective(400px) rotateY(-5deg); }
     100% { opacity: 1; -webkit-transform: perspective(400px) rotateY(0deg); }
 }
+.likeit{float: right;
+    margin-right: 100px;
+    margin-top: 20px;}
+.likeit:before{clear:both}

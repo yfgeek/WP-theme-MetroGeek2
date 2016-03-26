@@ -16,9 +16,12 @@
     <link href="<?php bloginfo('template_url'); ?>/favicon.ico" mce_href="<?php bloginfo('template_url'); ?>/favicon.ico" rel="bookmark" type="image/x-icon" /> 
 <link href="<?php bloginfo('template_url'); ?>/favicon.ico" mce_href="<?php bloginfo('template_url'); ?>/favicon.ico" rel="icon" type="image/x-icon" /> 
 <link href="<?php bloginfo('template_url'); ?>/favicon.ico" mce_href="<?php bloginfo('template_url'); ?>/favicon.ico" rel="shortcut icon" type="image/x-icon" /> 
+ <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/images/icons.css" /> 
+ <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/fonts/font-awesome-4.5.0/css/font-awesome.min.css" />
     <?php wp_head() ?>
       <script src="<?php bloginfo('template_url'); ?>/jquery/jquery.min.js">
       </script>
+
       <script>
         $(document).ready(function() {
           $(".vsss").fadeIn(400);

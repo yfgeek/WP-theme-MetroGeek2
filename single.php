@@ -1,17 +1,21 @@
 <?php get_header(); ?>
 <?php setPostViews(get_the_ID()); ?>  
 <script>
-$(document).ready(function(){
-$(".ablogtitle").click(function(){
-$(".blogmeta").fadeIn(500);
-});
-
+$(function() {
+	$.get("<?php bloginfo('template_url'); ?>/postlike.php", {likeid:"<?php echo get_the_ID()?>"},
+	function(data){
+    alert("Data Loaded: " + data);
+	});
 });
 
 </script>
 	<div id="blogcontent">
 	<div class="blog">
-	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?><div class="likeit"><ol class="grid"><li class="grid__item" style="list-style: none;">
+		<button class="icobutton icobutton--heart"><span class="fa fa-heart"></span><span class="icobutton__text icobutton__text--side"><?php echo getPostLike(get_the_ID()); ?></span></button>
+		</li></ol>
+		</div>
+
 		<ul class="blogmeta">
 			<li class="blogcate"><strong>分类:</strong> <?php the_category(', '); ?>  </li>
 			<li class="blogau"><strong>日期:</strong> <?php the_time('Y-m-d'); ?> </li>
@@ -32,4 +36,6 @@ $(".blogmeta").fadeIn(500);
 	</div>
 	</div>
 </div>
+	<script src="<?php bloginfo('template_url'); ?>/js/mo.min.js"></script>
+	<script src="<?php bloginfo('template_url'); ?>/js/demo.js"></script>
 <?php get_footer(); ?>
