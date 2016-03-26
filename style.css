@@ -1108,10 +1108,11 @@ pre {
 	margin:0;
 }
 #cate .current-cat {
-	background: #0099FF;
+	/* background: #0099FF; */
 }
 #cate .current-cat a {
 	color:#fff;
+	background: #454DBE;
 	font-weight:bold;
 }
 #cate li a:hover {
