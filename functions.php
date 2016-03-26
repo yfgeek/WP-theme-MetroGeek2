@@ -25,8 +25,8 @@ function custom_comments($comment,$args,$depth){
       <tr><td class="left"></td>
         <td align="left" class="comment-body"><?php comment_text();?></td>
         <td class="right"></td></tr>
-      <tr><td class="bottomleft"></td><td class="bottom"></td><td class="bottomright"></td></tr>
-    </table>
+<!--       <tr><td class="bottomleft"></td><td class="bottom"></td><td class="bottomright"></td></tr>
+ -->    </table>
     <div class="comment-author">
 			<?php printf(__('%1$s  %2$s <span class="says"></span>'),sprintf('<cite class="fn">%s</cite>',get_comment_author_link()),sprintf('<small class="comment-meta"><a href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a></small>',esc_url(get_comment_link($comment->comment_ID)),get_comment_time('c'),sprintf(__('%1$s %2$s'),get_comment_date('m-d'),get_comment_time(' H:i'))));
 			if($comment->comment_approved=='0'){?><em><?php _e('Your comment is awaiting moderation.');?></em><?php }
@@ -41,8 +41,8 @@ function custom_comments($comment,$args,$depth){
       <tr><td class="left"></td>
         <td align="left" class="comment-body"><?php comment_text();?></td>
         <td class="right"></td></tr>
-      <tr><td class="bottomleft"></td><td class="bottom"></td><td class="bottomright"></td></tr>
-    </table>
+<!--       <tr><td class="bottomleft"></td><td class="bottom"></td><td class="bottomright"></td></tr>
+ -->    </table>
     <div class="comment-author">
 			<?php 
 			printf(__('%1$s  %2$s <span class="says"></span>'),sprintf('<cite class="fn">%s</cite>',get_comment_author_link()),sprintf('<small class="comment-meta"><a href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a></small>',esc_url(get_comment_link($comment->comment_ID)),get_comment_time('c'),sprintf(__('%1$s %2$s'),get_comment_date('m-d'),get_comment_time(' H:i'))));

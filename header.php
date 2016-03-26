@@ -13,6 +13,9 @@
     />
     <meta name="keywords" content="<?php if($SearchKey)echo $SearchKey;if(is_single())echo ', '.$keywords;?>"
     />
+    <link href="<?php bloginfo('template_url'); ?>/favicon.ico" mce_href="<?php bloginfo('template_url'); ?>/favicon.ico" rel="bookmark" type="image/x-icon" /> 
+<link href="<?php bloginfo('template_url'); ?>/favicon.ico" mce_href="<?php bloginfo('template_url'); ?>/favicon.ico" rel="icon" type="image/x-icon" /> 
+<link href="<?php bloginfo('template_url'); ?>/favicon.ico" mce_href="<?php bloginfo('template_url'); ?>/favicon.ico" rel="shortcut icon" type="image/x-icon" /> 
     <?php wp_head() ?>
       <script src="<?php bloginfo('template_url'); ?>/jquery/jquery.min.js">
       </script>
@@ -21,12 +24,24 @@
           $(".vsss").fadeIn(400);
           $(".notvs").fadeIn(500);
           $(".page_item").fadeIn(500);
+           $("ul[data-liffect] li").each(function (i) {
+              $(this).attr("style", "-webkit-animation-delay:" + i * 300 + "ms;"
+                      + "-moz-animation-delay:" + i * 300 + "ms;"
+                      + "-o-animation-delay:" + i * 300 + "ms;"
+                      + "animation-delay:" + i * 300 + "ms;");
+              if (i == $("ul[data-liffect] li").size() -1) {
+                  $("ul[data-liffect]").addClass("play")
+              }
+             });
+
           $(".comment-form-email").html("<label for='email'>Email</label> <input id='email' name='email' type='text' value='' size='30' aria-describedby='email-notes'>");
           var listimg = $(".list").find("img");
           listimg.each(function(){
           	idmark = $(this).parent().attr('id').replace(/comment-/,"");
           	$(this).wrap("<a href='?replytocom="+ idmark +"#respond' ></a>");
           });
+          $(".link--kukuri::before").hover();
+
          // $(".list").find("img").wrap("<a href=/?replytocom="+$(this).parent().last()+" #respond></a>");
         });
       </script>
@@ -38,15 +53,15 @@
         <div class="tbg">
         </div>
         <div id="logo">
-          <div class="title">
-            <?php bloginfo( 'name'); ?>
-          </div>
+          
+            <a class="link link--kukuri" href="#" data-letters="<?php bloginfo( 'name'); ?>"><?php bloginfo( 'name'); ?></a>
+         
           <div class="tit">
             <?php bloginfo( 'description'); ?>
           </div>
         </div>
         <div id="tab">
-          <ul>
+          <ul data-liffect="flipInY" >
             <?php if (is_page()) {?>
               <li class="notvs">
                 <a href="<?php bloginfo('url') ?>">
