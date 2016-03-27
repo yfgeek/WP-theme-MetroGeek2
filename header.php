@@ -24,9 +24,6 @@
 
       <script>
         $(document).ready(function() {
-          $(".vsss").fadeIn(400);
-          $(".notvs").fadeIn(500);
-          $(".page_item").fadeIn(500);
            $("ul[data-liffect] li").each(function (i) {
               $(this).attr("style", "-webkit-animation-delay:" + i * 300 + "ms;"
                       + "-moz-animation-delay:" + i * 300 + "ms;"
@@ -44,8 +41,6 @@
           	$(this).wrap("<a href='?replytocom="+ idmark +"#respond' ></a>");
           });
           $(".link--kukuri::before").hover();
-
-         // $(".list").find("img").wrap("<a href=/?replytocom="+$(this).parent().last()+" #respond></a>");
         });
       </script>
   </head>
