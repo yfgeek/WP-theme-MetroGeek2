@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" version="g42dymwpi--nx">
+<html>
   
   <head>
     <meta charset="<?php bloginfo('charset');?>" />
@@ -9,19 +9,24 @@
           <?php wp_title( ''); ?>
             <?php bloginfo(’name’); ?>
     </title>
-    <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>"
-    />
-    <meta name="keywords" content="<?php if($SearchKey)echo $SearchKey;if(is_single())echo ', '.$keywords;?>"
-    />
+    <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>"   />
+       <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/touch-icon-iphone.png">
+<link rel="apple-touch-icon" sizes="76x76" href="<?php bloginfo('template_url'); ?>/touch-icon-ipad.png">
+<link rel="apple-touch-icon" sizes="120x120" href="<?php bloginfo('template_url'); ?>/touch-icon-iphone-retina.png">
+<link rel="apple-touch-icon" sizes="152x152" href="<?php bloginfo('template_url'); ?>/touch-icon-ipad-retina.png">
+    <meta name="keywords" content="<?php if($SearchKey)echo $SearchKey;if(is_single())echo ', '.$keywords;?>"  />
     <link href="<?php bloginfo('template_url'); ?>/favicon.ico" mce_href="<?php bloginfo('template_url'); ?>/favicon.ico" rel="bookmark" type="image/x-icon" /> 
 <link href="<?php bloginfo('template_url'); ?>/favicon.ico" mce_href="<?php bloginfo('template_url'); ?>/favicon.ico" rel="icon" type="image/x-icon" /> 
 <link href="<?php bloginfo('template_url'); ?>/favicon.ico" mce_href="<?php bloginfo('template_url'); ?>/favicon.ico" rel="shortcut icon" type="image/x-icon" /> 
  <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/images/icons.css" /> 
  <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/fonts/font-awesome-4.5.0/css/font-awesome.min.css" />
+  <link href="<?php bloginfo('template_url'); ?>/css/vendor/bootstrap.min.css" rel="stylesheet">
+ 
     <?php wp_head() ?>
       <script src="<?php bloginfo('template_url'); ?>/jquery/jquery.min.js">
       </script>
-
+   <script src="<?php bloginfo('template_url'); ?>/js/bootstrap.min.js" type="text/javascript"></script>
       <script>
         $(document).ready(function() {
            $("ul[data-liffect] li").each(function (i) {
@@ -33,8 +38,6 @@
                   $("ul[data-liffect]").addClass("play")
               }
              });
-
-          $(".comment-form-email").html("<label for='email'>Email</label> <input id='email' name='email' type='text' value='' size='30' aria-describedby='email-notes'>");
           var listimg = $(".list").find("img");
           listimg.each(function(){
           	idmark = $(this).parent().attr('id').replace(/comment-/,"");
@@ -75,7 +78,7 @@
                 <?php }?>
                   <?php wp_list_pages( 'sort_column=menu_order&title_li='); ?>
           </ul>
-          <div id="search">
+          <div id="search" class="hidden-xs">
             <form role="search" method="get" class="search-form" action="<?php bloginfo('url') ?>">
               <input class="ipt" type="search" name="s" placeholder="请输入要搜索的内容">
               <input type="submit" class="search-submit" value="搜索" />

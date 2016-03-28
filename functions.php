@@ -19,23 +19,13 @@ function custom_comments($comment,$args,$depth){
 	<li <?php comment_class();?> id="li-comment-<?php comment_ID();?>">
     <?php if($comment->comment_author_email==get_the_author_meta('email')){?>
 		<div id="comment-<?php comment_ID();?>" class="list children">
-    <?php echo get_avatar($comment,48);?>
-    <table class="bubble" border="0" cellpadding="0" cellspacing="0">
-      <tr><td class="topleft"></td><td class="top"></td><td class="topright"></td></tr>
-      <tr><td class="left"></td>
-        <td align="left" class="comment-body"><?php comment_text();?></td>
-        <td class="right"></td></tr>
-<!--       <tr><td class="bottomleft"></td><td class="bottom"></td><td class="bottomright"></td></tr>
- -->    </table>
-    <div class="comment-author">
-			<?php printf(__('%1$s  %2$s <span class="says"></span>'),sprintf('<cite class="fn">%s</cite>',get_comment_author_link()),sprintf('<small class="comment-meta"><a href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a></small>',esc_url(get_comment_link($comment->comment_ID)),get_comment_time('c'),sprintf(__('%1$s %2$s'),get_comment_date('m-d'),get_comment_time(' H:i'))));
-			if($comment->comment_approved=='0'){?><em><?php _e('Your comment is awaiting moderation.');?></em><?php }
-			edit_comment_link('编辑','&nbsp;&nbsp;',' | ');comment_reply_link(array_merge($args,array('depth'=>$depth,'max_depth'=>$args['max_depth'])));?>
-		</div>
-	</div>
-	<?php }else{?>
-	<div id="comment-<?php comment_ID();?>" class="list">
-		<?php echo get_avatar($comment,48);?>
+    <div class="rightcoment">
+        <?php echo get_avatar($comment,48);?>
+        <div class="rtit">
+            <cite class="fn"><?php echo get_comment_author_link() ?></cite>
+        </div>
+    </div> 
+
     <table class="bubble" border="0" cellpadding="0" cellspacing="0">
       <tr><td class="topleft"></td><td class="top"></td><td class="topright"></td></tr>
       <tr><td class="left"></td>
@@ -45,7 +35,27 @@ function custom_comments($comment,$args,$depth){
  -->    </table>
     <div class="comment-author">
 			<?php 
-			printf(__('%1$s  %2$s <span class="says"></span>'),sprintf('<cite class="fn">%s</cite>',get_comment_author_link()),sprintf('<small class="comment-meta"><a href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a></small>',esc_url(get_comment_link($comment->comment_ID)),get_comment_time('c'),sprintf(__('%1$s %2$s'),get_comment_date('m-d'),get_comment_time(' H:i'))));
+			if($comment->comment_approved=='0'){?><em><?php _e('Your comment is awaiting moderation.');?></em><?php }
+			edit_comment_link('编辑','&nbsp;&nbsp;',' | ');comment_reply_link(array_merge($args,array('depth'=>$depth,'max_depth'=>$args['max_depth'])));?>
+		</div>
+	</div>
+	<?php }else{?>
+	<div id="comment-<?php comment_ID();?>" class="list">
+    <div class="leftcoment">
+		<?php echo get_avatar($comment,48);?>
+        <div class="ltit">
+            <cite class="fn"><?php echo get_comment_author_link() ?></cite>
+        </div>
+    </div>       
+    <table class="bubble" border="0" cellpadding="0" cellspacing="0">
+      <tr><td class="topleft"></td><td class="top"></td><td class="topright"></td></tr>
+      <tr><td class="left"></td>
+        <td align="left" class="comment-body"><?php comment_text();?></td>
+        <td class="right"></td></tr>
+<!--       <tr><td class="bottomleft"></td><td class="bottom"></td><td class="bottomright"></td></tr>
+ -->    </table>
+    <div class="comment-author">
+			<?php 
 			if($comment->comment_approved=='0'){
 			?><em>
 			<?php _e('Your comment is awaiting moderation.');?>

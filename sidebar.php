@@ -1,4 +1,4 @@
-<div id="side">
+<div id="side" class="hidden-xs">
 
 	<div id="feed" class="sids">
 			<div class="sidetitle"><div class="lg"></div>关注</div>

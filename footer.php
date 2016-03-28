@@ -1,7 +1,7 @@
 </div>
 <div id="footer">
   <div class="man">
-    <div id="links">
+    <div id="links" class="hidden-xs">
       <div class="lk">
         L
         <br/>

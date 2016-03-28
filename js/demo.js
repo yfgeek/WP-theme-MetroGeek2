@@ -219,12 +219,12 @@
 			],
 			onCheck : function() {
 				el14.style.color = '#F35186';
-				el14counter.innerHTML = Number(el14counter.innerHTML) + 1;
+				el14counter.innerHTML = Number(el14counter.innerHTML)+1;
 			},
 			onUnCheck : function() {
-				el14.style.color = '#C0C1C3';
-				var current = Number(el14counter.innerHTML);
-				el14counter.innerHTML = current > 1 ? Number(el14counter.innerHTML) - 1 : '';
+				// el14.style.color = '#C0C1C3';
+				// var current = Number(el14counter.innerHTML);
+				// el14counter.innerHTML = current > 1 ? Number(el14counter.innerHTML) - 1 : '';
 			}
 		});
 

@@ -13,7 +13,25 @@ if(!comments_open()){?>
 	<p class="nocomments"></p>
 
 <?php }}
-comment_form('comment_notes_after= ');
+$commenter = wp_get_current_commenter();
+$req = get_option( 'require_name_email' );
+$aria_req = ( $req ? " aria-required='true'" : '' );
+$fields =  array(
+    'author' => '<p class="comment-form-author">' . '<label for="author" class="sr-only">' . __( 'Name' ) . '</label> ' . ( $req ? '' : '' ) .
+        '<input id="author" name="author" class="form-control" type="text" placeholder="昵称(必填)" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>',
+    'email'  => '<p class="comment-form-email"><label for="email" class="sr-only">' . __( 'Email' ) . '</label> ' . ( $req ? '' : '' ) .
+        '<input id="email" class="form-control" name="email" type="text" placeholder="Email(必填)" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></p>',
+);
+ 
+$comments_args = array(
+    'fields' =>  $fields,
+    'comment_field'	=> '<textarea id="comment" name="comment" class="form-control" rows="3" aria-required="true"></textarea>',
+    'title_reply'=>'评论一下',
+    'label_submit' => '我写好啦'
+);
+ 
+comment_form($comments_args);
 ?>
+<div style="clear:both"></div>
 
 </div>

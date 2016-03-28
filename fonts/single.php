@@ -37,7 +37,7 @@ $(document).on("click", ".specsZan",
 		<div class="likeit">
 		<ol class="grid">
 		<li class="grid__item" style="list-style: none;">
-		<button  data-action="ding" data-id="<?php the_ID(); ?>" class="icobutton icobutton--heart specsZan <?php if(isset($_COOKIE['specs_zan_'.$post->ID])) echo 'done';?>">
+		<button  data-action="ding" data-id="<?php the_ID(); ?>" class="icobutton icobutton--heart specsZan <?php if(isset($_COOKIE['specs_zan_'.$post->ID])) echo 'done';?>"
 		<span class="fa fa-heart"></span>
 		<span class="icobutton__text icobutton__text--side count">
 		<?php if( get_post_meta($post->ID,'specs_zan',true) ){
